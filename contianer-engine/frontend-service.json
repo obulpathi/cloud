@@ -1,0 +1,23 @@
+{
+   "kind":"Service",
+   "apiVersion":"v1",
+   "metadata":{
+      "name":"frontend",
+      "labels":{
+         "name":"frontend"
+      }
+   },
+   "spec":{
+      "type": "LoadBalancer",
+      "ports": [
+        {
+          "port":80,
+          "targetPort":80,
+          "protocol":"TCP"
+        }
+      ],
+      "selector":{
+         "name":"frontend"
+      }
+   }
+}
