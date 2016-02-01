@@ -1,7 +1,7 @@
 from gcloud import datastore
 
 
-dataset = datastore.Client(dataset_id='obulpathinew')
+dataset = datastore.Client(project='thedatalabproject')
 
 query = dataset.query(kind='Greeting')
 for result in query.fetch():
