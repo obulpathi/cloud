@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.apis:google-api-services-datastore-protobuf:v1beta2-rev1-3.0.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/apis/google-api-services-datastore-protobuf/v1beta2-rev1-3.0.2/google-api-services-datastore-protobuf-v1beta2-rev1-3.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/apis/google-api-services-datastore-protobuf/v1beta2-rev1-3.0.2/google-api-services-datastore-protobuf-v1beta2-rev1-3.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/apis/google-api-services-datastore-protobuf/v1beta2-rev1-3.0.2/google-api-services-datastore-protobuf-v1beta2-rev1-3.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
