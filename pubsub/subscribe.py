@@ -1,13 +1,17 @@
+import time
 from gcloud import pubsub
 
-client = pubsub.Client(project='thedatalabproject')
-topic = client.topic('mytopic')
+client = pubsub.Client(project='thedataclouds')
+topic = client.topic('mytopic234')
 
-subscription = topic.subscription('mysubscriber')
+subscription = topic.subscription('mysubscriber234')
 
-messages = subscription.pull()
+while True:
+    try:
+        messages = subscription.pull()
+        for ackid, message in messages:
+            print message.data
 
-for ackid, message in messages:
-    print message.data
-
-subscription.acknowledge([ackid for ackid, _ in messages])
+        subscription.acknowledge([ackid for ackid, _ in messages])
+    except:
+        time.sleep(1)
