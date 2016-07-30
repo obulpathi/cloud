@@ -58,3 +58,6 @@ target/
 
 # Mac files
 .DS_Store
+
+# outputs
+output/
