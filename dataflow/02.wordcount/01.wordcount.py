@@ -35,7 +35,7 @@ import argparse
 import logging
 import re
 
-import google.cloud.dataflow as df
+import apache_beam as df
 
 
 def run(argv=None):
