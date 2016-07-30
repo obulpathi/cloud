@@ -78,10 +78,9 @@ def run(argv=None):
   # Count the occurrences of each word.
   counts = (lines
             | (df.FlatMap('split', lambda x: re.findall(r'[A-Za-z\']+', x))
-               .with_output_types(unicode))
             | df.Map('pair_with_one', lambda x: (x, 1))
             | df.GroupByKey('group')
-            | df.Map('count', lambda (word, ones): (word, sum(ones))))
+            | df.Map('count', lambda (word, ones): (word, sum(ones)))))
 
   # Format the counts into a PCollection of strings.
   output = counts | df.Map('format', lambda (word, c): '%s: %s' % (word, c))
