@@ -1,6 +1,6 @@
-import mlapi as api
+import mlapi
 
 text = 'My trip to Yosemite was amazing!'
 
-result = api.sentiment(text)
+result = mlapi.sentiment(text)
 print(result)

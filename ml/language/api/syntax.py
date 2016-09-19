@@ -1,6 +1,6 @@
 import textwrap
 
-import mlapi as api
+import mlapi
 
 text = textwrap.dedent(u'''\
     Keep away from people who try to belittle your ambitions. Small people
@@ -8,5 +8,5 @@ text = textwrap.dedent(u'''\
     become great.
     - Mark Twain''')
 
-result = api.syntax(text)
+result = mlapi.syntax(text)
 print(result)
