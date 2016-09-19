@@ -42,7 +42,7 @@ def get_native_encoding_type():
         return 'UTF32'
 
 
-def analyze_entities(text, encoding='UTF32'):
+def entities(text, encoding='UTF32'):
     body = {
         'document': {
             'type': 'PLAIN_TEXT',
@@ -59,7 +59,7 @@ def analyze_entities(text, encoding='UTF32'):
     return response
 
 
-def analyze_sentiment(text):
+def sentiment(text):
     body = {
         'document': {
             'type': 'PLAIN_TEXT',
@@ -75,7 +75,7 @@ def analyze_sentiment(text):
     return response
 
 
-def analyze_syntax(text, encoding='UTF32'):
+def syntax(text, encoding='UTF32'):
     body = {
         'document': {
             'type': 'PLAIN_TEXT',
