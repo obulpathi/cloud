@@ -106,10 +106,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.command == 'entities':
-        result = analyze_entities(args.text, get_native_encoding_type())
+        result = entities(args.text, get_native_encoding_type())
     elif args.command == 'sentiment':
-        result = analyze_sentiment(args.text)
+        result = sentiment(args.text)
     elif args.command == 'syntax':
-        result = analyze_syntax(args.text, get_native_encoding_type())
+        result = syntax(args.text, get_native_encoding_type())
 
     print(json.dumps(result, indent=2))
