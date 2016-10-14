@@ -30,3 +30,24 @@ cloud beta ml jobs submit training ${JOB_NAME} --package-path=trainer --module-n
 cloud beta ml jobs describe --project ${PROJECT_ID} ${JOB_NAME}
 
 gsutil ls ${TRAIN_PATH}/train
+
+
+JOB_NAME=datalab_ml_mnist_2
+
+PROJECT_ID='thedatalabproject'
+TRAIN_BUCKET=gs://datalab-models
+TRAIN_PATH=${TRAIN_BUCKET}/${JOB_NAME}
+gsutil rm -rf ${TRAIN_PATH}
+
+
+cloud beta ml jobs submit training ${JOB_NAME} \
+  --package-path=trainer \
+  --module-name=trainer.task \
+  --staging-bucket="${TRAIN_BUCKET}" \
+  --region=us-central1 \
+  -- \
+  --train_dir="${TRAIN_PATH}/train" \
+  --model_dir="${TRAIN_PATH}/model"
+
+
+cloud beta ml models versions create --origin=${TRAIN_PATH}/model/ --model=${MODEL_NAME} v1
